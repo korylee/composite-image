@@ -27,8 +27,6 @@ export default defineConfig(({ mode }) => {
       jsxFragment: "Fragment",
       jsxInject: `import { h } from 'vue'`,
     },
-    build:{
-      base: "/composite-image/",
-    }
+    base: "composite-image",
   };
 });
