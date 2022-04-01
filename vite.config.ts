@@ -16,6 +16,7 @@ export default defineConfig(({ mode }) => {
       },
     };
   return {
+    base: "/composite-image/",
     plugins: [vue()],
     resolve: {
       alias: {
@@ -27,8 +28,5 @@ export default defineConfig(({ mode }) => {
       jsxFragment: "Fragment",
       jsxInject: `import { h } from 'vue'`,
     },
-    build:{
-      base: "/composite-image/",
-    }
   };
 });
