@@ -1,5 +1,5 @@
 <script  lang="tsx">
-import CompositeImage from '../src';
+import CompositeImage from '@korylee/composite-image';
 import { defineComponent, onMounted, ref } from 'vue';
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 export default defineComponent({
@@ -32,6 +32,12 @@ export default defineComponent({
         position: CompositeImage.LOWER_LEFT,
         width: 30,
         height: 30,
+      })
+      .composite({
+        src: 'https://www.npmjs.com/npm-avatar/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdmF0YXJVUkwiOiJodHRwczovL3MuZ3JhdmF0YXIuY29tL2F2YXRhci9hNmY2N2RiMWMyY2E3Mzc2OGI0MDY2NTVlMTdkMTFiZj9zaXplPTUwJmRlZmF1bHQ9cmV0cm8ifQ._kzxMzRQ34s0tzLOCZF6lrF3Mgd_5QliQdc4ocaR2ow',
+        position: CompositeImage.LOWER_RIGHT,
+        width: 30,
+        height: 30,
       });
     const canvas = ref(img.getCanvas());
     const src = ref('');
@@ -53,6 +59,7 @@ export default defineComponent({
       <div>
         <img src={src.value} style="border: 1px solid black" />
         <button onClick={() => img.download()}>download</button>
+        <input  value={src.value} style="width: 100%"/>
       </div>
     );
   },
