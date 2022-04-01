@@ -4,8 +4,6 @@ export const UPPER_RIGHT = "upperRight";
 export const LOWER_LEFT = "lowerLeft";
 export const LOWER_RIGHT = "lowerRight";
 
-// type ValueOf<T> = T[keyof T];
-
 export type PositionKeys =
   | typeof CENTER
   | typeof UPPER_LEFT
